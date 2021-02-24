@@ -4,6 +4,6 @@
   $config = [];
   
   // 后台配置
-  $config['user'] = "user"; //用户名
-  $config['pswd'] = "psd";  //密码
+  $config['user'] = "userrrrr"; //用户名
+  $config['pswd'] = "psdddddd";  //密码
 ?>
