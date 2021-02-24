@@ -5,7 +5,7 @@ int main(){
 	//ios::sync_with_stdio(false);
 	for(int i=0;i<40;i++) cout<<" "; 
 	cout<<"蜜柑计划 种子批量导出器\n\n";
-	char migan[255]={0},key[255]={0};
+	char migan[3253]={0},key[610]={0};
 	cout<<"键入关键词:";
 	cin>>key;
 	cout<<"\n请将弹出页面右键另存为a.xml,并置于本程序相同目录下\n"; 
