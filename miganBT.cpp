@@ -5,13 +5,13 @@ using namespace std;
 int main(int argc, char* argv[]){
 	//ios::sync_with_stdio(false);
 	for(int i=0;i<40;i++) cout<<" "; 
-	cout<<"蜜柑计划 种子批量导出器\n\n";
+	cout<<"蜜柑计划 种子批量导出器\n\n注：多个参数的话中间可使用加号隔开，例\n史莱姆+幻樱+1080+mp4+big5\n\n\n";
 	
 	//下载rss 
 	char migan[3253]={0},key[610]={0};
 	//char deskpath[255]=	{"E:\\OneDrive\\桌面\\"};
 	char deskpath[255]={"\%userprofile\%\\desktop\\"};
-	cout<<"键入关键词:";
+	cout<<"键入参数:";
 	cin>>key;
 	sprintf(migan,"powershell (new-object System.Net.WebClient).DownloadFile( \'https://mikanani.me/RSS/Search?searchstr=%s\',\'%stemp.xml\')",key,deskpath);//set migan, migan+=key		
 	system(migan);	
