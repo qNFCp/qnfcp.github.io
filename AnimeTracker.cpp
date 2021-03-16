@@ -3,17 +3,17 @@
 
 using namespace std;
 
-//char deskpath[255]=	{"E:\\OneDrive\\"};
-char deskpath[255]={"\%userprofile\%\\desktop\\"};
-char del[255]={0};
-char rss[3253]={0},key[610]={0};
+//char deskpath[255]=	{"E:\\OneDrive\\桌面\\"};
+//char deskpath[255]={"\%userprofile\%\\desktop\\"};
+char del[255];
+char rss[3253],key[610];
 int library=1;
 
 void dell(string temp){ //delete
 	char delpath[255];
 	temp.copy(delpath,temp.length(),0);
 	*(delpath+temp.length())='\0';
-	sprintf(del,"del \"%s%s\"",deskpath,delpath);
+	sprintf(del,"del \"%s\"",delpath);
 	system(del);
 	//sprintf(del,"del \"%sfile_name\"",deskpath);	
 	//system(del);
@@ -22,7 +22,7 @@ void dell(string temp){ //delete
 void rssdownload(string temp){
 	char tem[255];
 	temp.copy(tem,temp.length(),0);	
-	sprintf(rss,"powershell (new-object System.Net.WebClient).DownloadFile( \'%s%s\',\'%stemp.xml\')",tem,key,deskpath);	
+	sprintf(rss,"powershell (new-object System.Net.WebClient).DownloadFile( \'%s%s\',\'temp.xml\')",tem,key);	
 	//sprintf(rss,"powershell (new-object System.Net.WebClient).DownloadFile( \'https://mikanani.me/RSS/Search?searchstr=%s\',\'%stemp.xml\')",key,deskpath);	
 	system(rss);
 }
@@ -64,7 +64,7 @@ int acgnx(){
 
 int miobt(){
 	//download
-	sprintf(rss,"powershell (new-object System.Net.WebClient).DownloadFile( \'https://www.miobt.com/rss-%s.xml\',\'%stemp.xml\')",key,deskpath);
+	sprintf(rss,"powershell (new-object System.Net.WebClient).DownloadFile( \'https://www.miobt.com/rss-%s.xml\',\'temp.xml\')",key);
 	system(rss);
 	//link to file
 	freopen("temp.xml", "r", stdin);
@@ -106,7 +106,7 @@ void Display_library(int a){
 
 int main(){
 	for(int i=0;i<40;i++) cout<<" "; 
-	cout<<"AnimeTracker 番剧种子批量导出器 ver 1.1\n\n！！本程序及生成内容均仅供学习用途 This program and the generated content are for learning purposes only！！\n";
+	cout<<"AnimeTracker 番剧种子批量导出器 ver 1.2\n\n！！本程序及生成内容均仅供学习用途 This program and the generated content are for learning purposes only！！\n";
 	Display_library(0);
 	cout<<"请选择网站库(Please select site library)：\n";
 	cin>>library;
@@ -152,7 +152,7 @@ int main(){
 	
 	//修改文件名
 	char rename[255]={0};
-	sprintf(rename,"ren \"%stemp.txt\" %s.txt\"",deskpath,key);
+	sprintf(rename,"ren \"temp.txt\" %s.txt\"",key);
 	cout<<rename; 
 	system(rename);	
 	return 0;
