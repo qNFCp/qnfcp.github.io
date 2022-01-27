@@ -1,4 +1,3 @@
-package SSK3313LAB7;
 import java.util.LinkedList;
 import java.util.Scanner;
 
