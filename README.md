@@ -4,12 +4,13 @@
 放杂物的地方
 
 --------------------------------------------------------------------
-algorithm
---frame replacement algorithm for virtual memory
+--algorithm
 
-----FIFO
+----frame replacement algorithm for virtual memory
 
-----LRU
+------FIFO
+
+------LRU
 
 --------------------------------------------------------------------
 
