@@ -1,5 +1,3 @@
-package SSK3313LAB7;
-
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -9,12 +7,12 @@ public class LRU {
 		LinkedList<Integer> q = new LinkedList<>();
 		LinkedList<Integer> all = new LinkedList<>();
         Scanner sc=new Scanner(System.in);
-        int f;//Ö¡´óĞ¡
-		int n;//×ÜÊı
+        int f;//å¸§å¤§å°
+		int n;//æ€»æ•°
 		int temp,i;
 		int lruans=0;
 		
-		int p;//Òª±»¸²¸ÇµôµÄ
+		int p;//è¦è¢«è¦†ç›–æ‰çš„
 		System.out.print("F:");
 		f=sc.nextInt();
 		System.out.print("N:");
