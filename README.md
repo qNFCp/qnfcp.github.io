@@ -8,9 +8,16 @@
 
 ----frame replacement algorithm for virtual memory
 
-------FIFO
+------FIFO.java
 
-------LRU
+------LRU.java
+
+----Memory placement algorithms
+
+------BestFit.java
+
+------FirstFit.java
+
 
 --------------------------------------------------------------------
 
