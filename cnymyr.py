@@ -20,10 +20,10 @@ alipay_rate = float(df.iloc[0, 1])
 unionpay_rate = float(df.iloc[1, 1])
 
 
-print('银联汇率: \t{}\t\t{}CNY=100MYR\n'.format(unionpay_rate,unionpay_rate*100))
+print('银联汇率: \t{}\t{}CNY = 100MYR\t\t{:.2f}CNY = 1500MYR\n'.format(unionpay_rate,unionpay_rate*100,unionpay_rate*1500))
 
 alipay_percentage = (alipay_rate - unionpay_rate) / unionpay_rate * 100
-print('支付宝汇率: \t{} ({:+.1f}%)'.format(alipay_rate, alipay_percentage))
+print('支付宝汇率: \t{} ({:+.2f}%)'.format(alipay_rate, alipay_percentage))
 
 
 ## 表2 银行
